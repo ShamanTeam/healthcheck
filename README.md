@@ -1,1 +1,6 @@
-# healthcheck
+# Healthcheck
+
+## Usage
+```
+coming soon
+```
