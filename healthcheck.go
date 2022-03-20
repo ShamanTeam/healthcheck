@@ -49,11 +49,11 @@ func (h *HealthCheck) Check() ([]byte, bool, error) {
 func (h *HealthCheck) checkProblem(checks []CheckResult) bool {
 	for _, check := range checks {
 		if check.Status == false {
-			return false
+			return true
 		}
 	}
 
-	return true
+	return false
 }
 
 func Handler(check *HealthCheck) http.Handler {
