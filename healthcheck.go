@@ -69,9 +69,9 @@ func Handler(check *HealthCheck) http.Handler {
 		}
 
 		if err != nil {
-			w.Write(result)
-		} else {
 			w.Write([]byte(err.Error()))
+		} else {
+			w.Write(result)
 		}
 	})
 }
