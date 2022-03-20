@@ -40,10 +40,10 @@ func (h *HealthCheck) Check() ([]byte, bool, error) {
 	result, err := json.Marshal(checkResults)
 
 	if err != nil {
-		return result, problem, nil
+		return nil, problem, nil
 	}
 
-	return nil, problem, err
+	return result, problem, err
 }
 
 func (h *HealthCheck) checkProblem(checks []CheckResult) bool {
